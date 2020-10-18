@@ -4,15 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorToggled">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        app:layout_constraintGuide_percent=".85"
+        android:orientation="horizontal"
+        android:id="@+id/bar_guide" />
+
+    <fragment
+        android:name="com.barkerjeb.liftmeup.LiftManager"
+        android:layout_width="match_parent"
+        android:layout_height="@id/bar_guide"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/bar_guide"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/fragment"
+        />
+
+    <Button
+        android:id="@+id/main_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="@id/bar_guide"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/colorAccent"
+        android:checked="true"
+        android:text="@string/main_page"
+        android:onClick="toggles"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/statter"
+        app:layout_constraintTop_toBottomOf="@id/bar_guide" />
+
+    <Button
+        android:layout_height="@id/bar_guide"
+        android:layout_width="wrap_content"
+        android:id="@+id/statter"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/stats"
+        android:onClick="toggles"
+        app:layout_constraintTop_toBottomOf="@id/bar_guide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/main_pager"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/round_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
