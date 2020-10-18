@@ -9,4 +9,13 @@
     <string name="when_did_you_lift_mm_dd_yy">When did you lift? (MM/DD/YY)</string>
     <string name="submit">Submit</string>
     <string name="create_new_lift">Create New Lift</string>
+    <string name="lifts">{
+	\"list_data\": [{
+		\"date\": \"10–18–20\",
+		\"amount\": \"225 lbs\",
+		\"repsndsets\": \"5 x 5\",
+		\"type\": \"Deadlift\"
+	}]
+}
+    </string>
 </resources>

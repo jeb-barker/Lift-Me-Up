@@ -1,17 +1,13 @@
 package com.barkerjeb.liftmeup;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.core.graphics.drawable.DrawableCompat;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 
 public class MainActivity extends AppCompatActivity {
     Button main, stat;
@@ -59,5 +55,13 @@ public class MainActivity extends AppCompatActivity {
             stat.setBackground(buttonDrawable);
             isMain = true;
         }
+    }
+
+    public void newLift(View view) {
+        LiftManager.newLift(view);
+    }
+
+    public void submitLift(View view) {
+        LiftManager.submitLift(view);
     }
 }
