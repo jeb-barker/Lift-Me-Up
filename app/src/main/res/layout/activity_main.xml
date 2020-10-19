@@ -14,8 +14,7 @@
         android:orientation="horizontal"
         android:id="@+id/bar_guide" />
 
-    <fragment
-        android:name="com.barkerjeb.liftmeup.LiftManager"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="@id/bar_guide"
         android:layout_marginLeft="20dp"

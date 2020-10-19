@@ -4,14 +4,19 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
     Button main, stat;
     boolean isMain = true;
+    LiftManager lm;
+    FrameLayout fragment;
+    StatManager sm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
         main = findViewById(R.id.main_pager);
         stat = findViewById(R.id.statter);
+        lm = new LiftManager();
+        fragment = findViewById(R.id.fragment);
+        sm = new StatManager();
+
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment, lm).commit();
     }
 
     public void toggles(View view) {
@@ -39,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
             DrawableCompat.setTint(button2Drawable, ContextCompat.getColor(main.getContext(), R.color.colorPrimary));
             main.setBackground(button2Drawable);
             isMain = false;
+
+
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            transaction.replace(R.id.fragment, sm);
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
         else if (!isMain && b.getText().equals("Main Page"))
         {
@@ -54,14 +72,14 @@ public class MainActivity extends AppCompatActivity {
             DrawableCompat.setTint(buttonDrawable, ContextCompat.getColor(stat.getContext(), R.color.colorPrimary));
             stat.setBackground(buttonDrawable);
             isMain = true;
+
+
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            transaction.replace(R.id.fragment, lm);
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
-    }
-
-    public void newLift(View view) {
-        LiftManager.newLift(view);
-    }
-
-    public void submitLift(View view) {
-        LiftManager.submitLift(view);
     }
 }

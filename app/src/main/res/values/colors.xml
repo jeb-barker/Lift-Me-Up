@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#7CC6FE</color>
     <color name="colorAccent">#8789C0</color>
     <color name="colorToggled">#C4CBCA</color>
+    <color name="colorReset">#B3463E</color>
 </resources>

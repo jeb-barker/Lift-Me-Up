@@ -4,7 +4,7 @@
     <string name="stats">Stats</string>
     <string name="new_lift">New Lift</string>
     <string name="how_much_did_you_lift">How much did you lift?</string>
-    <string name="how_many_reps_and_sets_did_you_do_format_as_reps_x_sets">How many reps and sets did you do? (format as reps x sets)</string>
+    <string name="how_many_reps_and_sets_did_you_do_format_as_reps_x_sets">How many reps and sets did you do? (format as reps\"x\"sets)</string>
     <string name="what_lift_did_you_do">What lift did you do?</string>
     <string name="when_did_you_lift_mm_dd_yy">When did you lift? (MM/DD/YY)</string>
     <string name="submit">Submit</string>
@@ -18,4 +18,5 @@
 	}]
 }
     </string>
+    <string name="reset_all_lifts">RESET ALL LIFTS</string>
 </resources>
