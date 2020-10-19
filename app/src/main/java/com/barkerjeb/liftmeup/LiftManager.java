@@ -94,7 +94,7 @@ public class LiftManager extends Fragment {
         lif.setTextSize(35);
         lif.setGravity(Gravity.CENTER);
 
-        lif.setBackgroundResource(R.color.colorToggled);
+        lif.setBackgroundResource(R.drawable.faded_text);
 
         ((LinearLayout)liftContainer).addView(lif);
     }
