@@ -8,64 +8,72 @@
     tools:context=".StatManager"
     android:background="@color/colorAccent">
 
-    <GridLayout
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/griddy"
-        android:rowCount="4"
-        android:columnCount="1"
+        android:id="@+id/a"
         android:foregroundGravity="center_horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="55dp"
         app:layout_constraintBottom_toTopOf="@id/resetter"
-        android:layout_marginBottom="55dp">
+        android:layout_marginBottom="35dp">
 
-        <TextView
+        <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="35dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:background="@drawable/faded_text"
-            android:id="@+id/avgWeight"/>
+            android:id="@+id/griddy"
+            android:rowCount="4"
+            android:columnCount="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
-            android:layout_marginBottom="35dp"
-            android:layout_gravity="center"
-            android:background="@drawable/faded_text"
-            android:id="@+id/avgReps"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="35dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/faded_text"
+                android:id="@+id/avgWeight"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:gravity="center"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="35dp"
-            android:layout_gravity="center"
-            android:background="@drawable/faded_text"
-            android:id="@+id/totalWeight"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/faded_text"
+                android:id="@+id/avgReps"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="35dp"
-            android:background="@drawable/faded_text"
-            android:id="@+id/totalReps"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/faded_text"
+                android:id="@+id/totalWeight"/>
 
-    </GridLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/faded_text"
+                android:id="@+id/totalReps"/>
+
+        </GridLayout>
+
+    </ScrollView>
 
     <Button
         android:layout_width="wrap_content"

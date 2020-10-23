@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,7 @@ public class LiftManager extends Fragment {
     LinearLayout liftMaker;
     LinearLayout liftContainer;
     Button buttonMaker;
+    ScrollView lmmm;
     Lifts data;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -70,7 +72,7 @@ public class LiftManager extends Fragment {
             }
         });
         //System.out.println(getString(R.string.lifts));
-
+        lmmm = view.findViewById(R.id.lmmm);
 
         sharedPreferences = view.getContext().getSharedPreferences("Values", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
@@ -113,13 +115,14 @@ public class LiftManager extends Fragment {
         updateVis();
     }
     public void updateVis(){
-        liftMaker.setVisibility(View.INVISIBLE);
+        lmmm.setVisibility(View.INVISIBLE);
         liftContainer.setVisibility(View.VISIBLE);
         buttonMaker.setVisibility(View.VISIBLE);
     }
 
     public void newLift(View view){//deprecated
-        liftMaker.setVisibility(View.VISIBLE);
+        lmmm.setVisibility(View.VISIBLE);
+
         liftContainer.setVisibility(View.INVISIBLE);
         buttonMaker.setVisibility(View.INVISIBLE);
     }

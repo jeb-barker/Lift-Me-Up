@@ -54,68 +54,78 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/liftMaker"
-        android:rowCount="2"
-        android:columnCount="2"
-        android:visibility="invisible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/lmmm"
+        android:visibility="invisible"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:textFontWeight="45"
-            android:textSize="30dp"
-            android:text="@string/new_lift" />
+            android:orientation="vertical"
+            android:id="@+id/liftMaker">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/date"
-            android:layout_gravity="center"
-            android:hint="@string/when_did_you_lift_mm_dd_yy" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textSize="30sp"
+                android:text="@string/new_lift" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/amount"
-            android:layout_gravity="center"
-            android:hint="@string/how_much_did_you_lift" />
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/repsnsets"
-            android:layout_gravity="center"
-            android:hint="@string/how_many_reps_and_sets_did_you_do_format_as_reps_x_sets" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/date"
+                android:autofillHints="@string/when_did_you_lift_mm_dd_yy"
+                android:inputType="date"
+                android:layout_gravity="center"
+                android:hint="@string/when_did_you_lift_mm_dd_yy" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/lift"
-            android:layout_gravity="center"
-            android:hint="@string/what_lift_did_you_do" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/amount"
+                android:autofillHints="@string/how_much_did_you_lift"
+                android:inputType="number"
+                android:layout_gravity="center"
+                android:hint="@string/how_much_did_you_lift" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:autofillHints="@string/how_many_reps_and_sets_did_you_do_format_as_reps_x_sets"
+                android:id="@+id/repsnsets"
+                android:layout_gravity="center"
+                android:hint="@string/how_many_reps_and_sets_did_you_do_format_as_reps_x_sets" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sub"
-            android:layout_gravity="center"
-            android:text="@string/submit"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/lift"
+                android:autofillHints="@string/what_lift_did_you_do"
+                android:inputType="textNoSuggestions"
+                android:layout_gravity="center"
+                android:hint="@string/what_lift_did_you_do" />
 
-    </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sub"
+                android:layout_gravity="center"
+                android:text="@string/submit"/>
 
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
